@@ -16,12 +16,10 @@
     :root {
       --black: #090909;
       --charcoal: #151515;
-      --charcoal-light: #1d1d1d;
       --cream: #F3E9D2;
       --gold: #E5A21A;
       --border: #34312B;
       --muted: #B8B0A0;
-      --white: #ffffff;
     }
 
     * {
@@ -46,12 +44,15 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
       width: min(1120px, 90%);
       margin: auto;
     }
-
-    /* NAVIGATION */
 
     nav {
       position: sticky;
@@ -59,20 +60,19 @@
       z-index: 100;
       background: rgba(9,9,9,.96);
       border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(8px);
     }
 
     .nav-inner {
-      min-height: 76px;
+      min-height: 74px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      align-items: center;
+      gap: 20px;
     }
 
     .brand {
       font-family: "Oswald", sans-serif;
-      font-size: 1.55rem;
+      font-size: 1.5rem;
       font-weight: 700;
       letter-spacing: 1px;
     }
@@ -83,65 +83,28 @@
 
     .nav-links {
       display: flex;
-      align-items: center;
-      gap: 26px;
-      font-size: .88rem;
-      font-weight: 700;
+      gap: 24px;
+      font-family: "Oswald", sans-serif;
       text-transform: uppercase;
-      letter-spacing: .6px;
+      font-size: .9rem;
+      font-weight: 600;
     }
 
     .nav-links a:hover {
       color: var(--gold);
     }
 
-    /* HERO */
-
-    .hero {
-      min-height: 82vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 700px;
-      height: 700px;
-      border: 1px solid rgba(229,162,26,.14);
-      border-radius: 50%;
-      right: -250px;
-      top: -250px;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 450px;
-      height: 450px;
-      border: 1px solid rgba(229,162,26,.08);
-      border-radius: 50%;
-      right: -100px;
-      top: -100px;
-    }
-
-    .hero-content {
-      max-width: 900px;
-      position: relative;
-      z-index: 2;
-      padding: 100px 0;
+    section {
+      padding: 90px 0;
     }
 
     .eyebrow {
       color: var(--gold);
       font-family: "Oswald", sans-serif;
-      font-weight: 600;
-      letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      letter-spacing: 3px;
+      font-weight: 600;
+      margin-bottom: 12px;
     }
 
     h1, h2, h3 {
@@ -150,10 +113,23 @@
       line-height: 1.08;
     }
 
+    .hero {
+      border-bottom: 1px solid var(--border);
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
     h1 {
-      font-size: clamp(3.7rem, 9vw, 7.5rem);
+      font-size: clamp(4rem, 8vw, 7rem);
       letter-spacing: -2px;
-      margin-bottom: 10px;
     }
 
     .hero-gold {
@@ -162,33 +138,38 @@
 
     .hero-tagline {
       font-family: "Oswald", sans-serif;
-      font-size: clamp(1.35rem, 3vw, 2rem);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 24px;
+      margin: 12px 0 22px;
     }
 
     .hero-copy {
-      max-width: 720px;
       color: var(--muted);
-      font-size: 1.08rem;
-      margin-bottom: 34px;
+      max-width: 650px;
+      margin-bottom: 30px;
+      font-size: 1.05rem;
+    }
+
+    .hero-art img {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.45);
     }
 
     .buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 12px;
     }
 
     .button {
       display: inline-block;
-      padding: 14px 24px;
+      padding: 13px 22px;
       border: 2px solid var(--gold);
       font-family: "Oswald", sans-serif;
-      font-weight: 600;
-      letter-spacing: 1px;
       text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
       transition: .2s ease;
     }
 
@@ -202,19 +183,9 @@
       border-color: var(--cream);
     }
 
-    .button-secondary {
-      color: var(--cream);
-    }
-
     .button-secondary:hover {
       background: var(--gold);
       color: var(--black);
-    }
-
-    /* GENERAL SECTIONS */
-
-    section {
-      padding: 95px 0;
     }
 
     .section-dark {
@@ -222,99 +193,72 @@
     }
 
     .section-heading {
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
 
     .section-heading h2 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      margin-bottom: 12px;
+      font-size: clamp(2.7rem, 6vw, 4.5rem);
+      margin-bottom: 10px;
     }
 
     .section-heading p {
       max-width: 720px;
       color: var(--muted);
-      font-size: 1.05rem;
     }
 
     .gold-line {
       width: 65px;
       height: 4px;
       background: var(--gold);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
-
-    /* PODCAST */
 
     .podcast-grid {
       display: grid;
-      grid-template-columns: 1fr 1.25fr;
+      grid-template-columns: .9fr 1.1fr;
       gap: 55px;
       align-items: center;
     }
 
-    .podcast-art {
-      aspect-ratio: 1/1;
-      background:
-        linear-gradient(145deg, #181818, #050505);
+    .podcast-cover {
+      width: 100%;
       border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 35px;
-      position: relative;
     }
 
-    .podcast-art::before {
-      content: "DD";
-      font-family: "Oswald", sans-serif;
-      color: var(--gold);
-      font-size: clamp(5rem, 12vw, 9rem);
-      font-weight: 700;
-      line-height: 1;
-      opacity: .95;
-    }
-
-    .podcast-art strong {
-      font-family: "Oswald", sans-serif;
-      font-size: 2rem;
-      text-transform: uppercase;
-    }
-
-    .podcast-content h3 {
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      margin-bottom: 20px;
+    .podcast-content h2 {
+      font-size: clamp(2.7rem, 5vw, 4.2rem);
+      margin-bottom: 18px;
     }
 
     .podcast-content p {
       color: var(--muted);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    /* ABOUT */
+    .listen-label {
+      margin-top: 25px;
+      margin-bottom: 12px;
+    }
 
     .about-copy {
       max-width: 850px;
     }
 
     .about-copy p {
-      font-size: 1.1rem;
       color: var(--muted);
-      margin-bottom: 20px;
+      font-size: 1.08rem;
+      margin-bottom: 18px;
     }
 
     .statement {
       color: var(--cream) !important;
+      border-left: 5px solid var(--gold);
+      padding-left: 20px;
+      margin-top: 28px;
       font-family: "Oswald", sans-serif;
       text-transform: uppercase;
-      font-size: 1.65rem !important;
-      border-left: 5px solid var(--gold);
-      padding-left: 22px;
-      margin-top: 35px;
+      font-size: 1.5rem !important;
     }
-
-    /* SIX LANES */
 
     .lanes {
       display: grid;
@@ -325,59 +269,91 @@
     .lane {
       background: var(--charcoal);
       border: 1px solid var(--border);
-      padding: 32px 28px;
-      min-height: 190px;
-      transition: .2s ease;
-    }
-
-    .lane:hover {
-      transform: translateY(-4px);
-      border-color: var(--gold);
+      padding: 28px;
+      min-height: 185px;
     }
 
     .lane-number {
       color: var(--gold);
       font-family: "Oswald", sans-serif;
-      font-size: .9rem;
       letter-spacing: 2px;
     }
 
     .lane h3 {
-      font-size: 1.7rem;
-      margin: 9px 0;
+      font-size: 1.6rem;
+      margin: 8px 0;
     }
 
     .lane p {
       color: var(--muted);
-      font-size: .95rem;
     }
-
-    /* NETWORK */
 
     .network-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 20px;
     }
 
     .network-card {
       border: 1px solid var(--border);
       background: var(--black);
-      padding: 30px;
+      overflow: hidden;
+      transition: .2s ease;
+    }
+
+    .network-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+    }
+
+    .network-art {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .network-card-content {
+      padding: 24px;
+    }
+
+    .network-kicker {
+      color: var(--cream);
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: .85rem;
+      margin-bottom: 8px;
     }
 
     .network-card h3 {
       color: var(--gold);
-      font-size: 1.45rem;
+      font-size: 1.6rem;
       margin-bottom: 10px;
     }
 
     .network-card p {
       color: var(--muted);
-      font-size: .94rem;
+      font-size: .95rem;
     }
 
-    /* CTA */
+    .more-card {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        radial-gradient(circle, rgba(229,162,26,.12), transparent 65%),
+        #0d0d0d;
+    }
+
+    .plus {
+      font-family: "Oswald", sans-serif;
+      font-size: 6rem;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
 
     .cta {
       text-align: center;
@@ -387,22 +363,20 @@
       max-width: 850px;
       margin: auto;
       border: 1px solid var(--border);
-      padding: 65px 40px;
+      padding: 60px 35px;
       background: linear-gradient(145deg, #171717, #0d0d0d);
     }
 
     .cta h2 {
-      font-size: clamp(2.7rem, 6vw, 4.7rem);
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
       margin-bottom: 18px;
     }
 
     .cta p {
-      max-width: 650px;
-      margin: 0 auto 28px;
       color: var(--muted);
+      max-width: 650px;
+      margin: 0 auto 25px;
     }
-
-    /* SOCIAL */
 
     .social-links {
       display: flex;
@@ -412,10 +386,9 @@
 
     .social-links a {
       border: 1px solid var(--border);
-      padding: 11px 18px;
+      padding: 11px 17px;
       font-family: "Oswald", sans-serif;
       text-transform: uppercase;
-      letter-spacing: .5px;
     }
 
     .social-links a:hover {
@@ -423,72 +396,61 @@
       color: var(--gold);
     }
 
-    /* FOOTER */
-
     footer {
-      border-top: 1px solid var(--border);
-      padding: 55px 0;
       text-align: center;
+      padding: 50px 0;
+      border-top: 1px solid var(--border);
     }
 
-    footer .footer-brand {
+    .footer-brand {
       font-family: "Oswald", sans-serif;
       font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 10px;
     }
 
-    footer .footer-brand span {
+    .footer-brand span {
       color: var(--gold);
     }
 
     footer p {
       color: var(--muted);
-      margin-bottom: 8px;
+      margin-top: 8px;
     }
 
     .footer-tag {
-      color: var(--cream) !important;
+      color: var(--cream);
       font-family: "Oswald", sans-serif;
       text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
-    /* MOBILE */
-
     @media (max-width: 800px) {
-
       .nav-links {
         display: none;
       }
 
-      .hero {
-        min-height: auto;
-      }
-
-      .hero-content {
-        padding: 85px 0;
-      }
-
+      .hero-grid,
       .podcast-grid,
       .lanes,
       .network-grid {
         grid-template-columns: 1fr;
       }
 
-      .podcast-grid {
-        gap: 35px;
+      .hero {
+        min-height: auto;
       }
 
       section {
-        padding: 70px 0;
+        padding: 65px 0;
+      }
+
+      .hero-art {
+        margin-top: 15px;
       }
 
       .cta-inner {
-        padding: 45px 22px;
+        padding: 40px 20px;
       }
     }
-
   </style>
 </head>
 
@@ -496,171 +458,128 @@
 
 <nav>
   <div class="container nav-inner">
-
-    <a href="#top" class="brand">
-      DAD <span>DRIVE</span> LLC
-    </a>
+    <a href="#top" class="brand">DAD <span>DRIVE</span> LLC</a>
 
     <div class="nav-links">
       <a href="#podcast">Podcast</a>
       <a href="#about">About</a>
-      <a href="#lanes">The Six Lanes</a>
+      <a href="#lanes">Six Lanes</a>
       <a href="#network">Network</a>
       <a href="#community">Community</a>
     </div>
-
   </div>
 </nav>
 
-
 <main id="top">
 
-  <!-- HERO -->
-
   <section class="hero">
+    <div class="container hero-grid">
 
-    <div class="container">
+      <div>
+        <div class="eyebrow">Fatherhood • Leadership • Life</div>
 
-      <div class="hero-content">
-
-        <div class="eyebrow">
-          Fatherhood • Leadership • Life
-        </div>
-
-        <h1>
-          DAD <span class="hero-gold">DRIVE</span>
-        </h1>
+        <h1>DAD <span class="hero-gold">DRIVE</span></h1>
 
         <div class="hero-tagline">
           Real Talk. Real Life. Real Growth.
         </div>
 
         <p class="hero-copy">
-          Helping dads—and anyone striving to lead well—navigate
-          fatherhood, marriage, career, leadership, purpose, and life.
-          Honest conversations, practical perspective, a little Gen X
-          humor, and absolutely no perfect-dad nonsense.
+          Helping dads—and anyone striving to lead well—navigate fatherhood,
+          marriage, career, leadership, purpose, and life. Honest conversations,
+          practical perspective, a little Gen X humor, and absolutely no
+          perfect-dad nonsense.
         </p>
 
         <div class="buttons">
-
-          <a
-            class="button button-primary"
-            href="https://open.spotify.com/show/033SO7tZgLGoGoCMz9XE2m"
-            target="_blank"
-            rel="noopener">
+          <a class="button button-primary" href="#podcast">
             Listen to the Podcast
           </a>
 
-          <a
-            class="button button-secondary"
-            href="https://daddrivellc.beehiiv.com/"
-            target="_blank"
-            rel="noopener">
+          <a class="button button-secondary"
+             href="https://daddrivellc.beehiiv.com/"
+             target="_blank">
             Join the Drive
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <img src="assets/dad-drive-banner.png"
+             alt="Dad Drive">
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="podcast">
+    <div class="container podcast-grid">
+
+      <img class="podcast-cover"
+           src="assets/dad-drive-podcast.png"
+           alt="Dad Drive Podcast">
+
+      <div class="podcast-content">
+
+        <div class="eyebrow">The Podcast</div>
+
+        <h2>The Latest Drive</h2>
+
+        <p>
+          Real conversations for dads who are figuring out fatherhood,
+          marriage, work, leadership, kids, and life just like everybody else.
+        </p>
+
+        <p>
+          Dad Drive brings humor, perspective, and practical conversations
+          about what it means to show up, stay present, and lead well.
+        </p>
+
+        <div class="eyebrow listen-label">
+          Listen Your Way
+        </div>
+
+        <div class="buttons">
+
+          <a class="button button-primary"
+             href="https://open.spotify.com/show/033SO7tZgLGoGoCMz9XE2m"
+             target="_blank">
+            Spotify
+          </a>
+
+          <a class="button button-secondary"
+             href="https://podcasts.apple.com/us/podcast/dad-drive/id6800052210"
+             target="_blank">
+            Apple Podcasts
+          </a>
+
+          <a class="button button-secondary"
+             href="https://music.amazon.com/podcasts/7bb072fa-b8f8-4d52-a62a-0d02194e0c6e/dad-drive"
+             target="_blank">
+            Amazon Music
+          </a>
+
+          <a class="button button-secondary"
+             href="https://www.iheart.com/podcast/269-dad-drive-339260953/"
+             target="_blank">
+            iHeart
+          </a>
+
+          <a class="button button-secondary"
+             href="https://www.youtube.com/@TheDadDrive"
+             target="_blank">
+            YouTube
           </a>
 
         </div>
-
       </div>
 
     </div>
-
   </section>
 
-
-  <!-- PODCAST -->
-
-  <section id="podcast">
-
-    <div class="container">
-
-      <div class="podcast-grid">
-
-        <div class="podcast-art">
-          <strong>Dad Drive</strong>
-          <span>One drive at a time.</span>
-        </div>
-
-        <div class="podcast-content">
-
-          <div class="eyebrow">
-            The Podcast
-          </div>
-
-          <h3>
-            The Latest Drive
-          </h3>
-
-          <p>
-            Real conversations for dads who are figuring out fatherhood,
-            marriage, work, leadership, kids, and life just like everybody
-            else.
-          </p>
-
-          <p>
-            Dad Drive brings humor, perspective, and practical conversations
-            about what it means to show up, stay present, and lead well.
-          </p>
-
-         <div style="margin-top: 28px;">
-  <div class="eyebrow" style="margin-bottom: 14px;">
-    Listen Your Way
-  </div>
-
-  <div class="buttons">
-
-    <a class="button button-primary"
-       href="https://open.spotify.com/show/033SO7tZgLGoGoCMz9XE2m"
-       target="_blank"
-       rel="noopener">
-      Spotify
-    </a>
-
-    <a class="button button-secondary"
-       href="https://podcasts.apple.com/us/podcast/dad-drive/id6800052210"
-       target="_blank"
-       rel="noopener">
-      Apple Podcasts
-    </a>
-
-    <a class="button button-secondary"
-       href="https://music.amazon.com/podcasts/7bb072fa-b8f8-4d52-a62a-0d02194e0c6e/dad-drive"
-       target="_blank"
-       rel="noopener">
-      Amazon Music
-    </a>
-
-    <a class="button button-secondary"
-       href="https://www.iheart.com/podcast/269-dad-drive-339260953/"
-       target="_blank"
-       rel="noopener">
-      iHeart
-    </a>
-
-    <a class="button button-secondary"
-       href="https://www.youtube.com/@TheDadDrive"
-       target="_blank"
-       rel="noopener">
-      YouTube
-    </a>
-
-  </div>
-</div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
 
   <section id="about" class="section-dark">
-
     <div class="container">
 
       <div class="section-heading">
@@ -683,9 +602,9 @@
         </p>
 
         <p>
-          Dad Drive creates a place to talk honestly about all of it—the
-          wins, mistakes, pressure, humor, uncertainty, and lessons we're
-          learning along the way.
+          Dad Drive creates a place to talk honestly about all of it—the wins,
+          mistakes, pressure, humor, uncertainty, and lessons we're learning
+          along the way.
         </p>
 
         <p>
@@ -697,35 +616,22 @@
         </p>
 
       </div>
-
     </div>
-
   </section>
 
 
-  <!-- SIX LANES -->
-
   <section id="lanes">
-
     <div class="container">
 
       <div class="section-heading">
-
         <div class="gold-line"></div>
-
-        <div class="eyebrow">
-          What We Talk About
-        </div>
-
-        <h2>
-          Real Life. Six Lanes.
-        </h2>
+        <div class="eyebrow">What We Talk About</div>
+        <h2>Real Life. Six Lanes.</h2>
 
         <p>
-          Dad Drive isn't about one part of being a dad. It's about the
-          whole drive.
+          Dad Drive isn't about one part of being a dad.
+          It's about the whole drive.
         </p>
-
       </div>
 
       <div class="lanes">
@@ -767,91 +673,117 @@
         </div>
 
       </div>
-
     </div>
-
   </section>
 
 
-  <!-- NETWORK -->
-
   <section id="network" class="section-dark">
-
     <div class="container">
 
       <div class="section-heading">
-
         <div class="gold-line"></div>
-
-        <div class="eyebrow">
-          Dad Drive LLC
-        </div>
-
-        <h2>
-          The Dad Drive Network
-        </h2>
+        <div class="eyebrow">Dad Drive LLC</div>
+        <h2>The Dad Drive Network</h2>
 
         <p>
-          Dad Drive LLC is growing into a collection of conversations,
-          shows, and projects built around family, culture, humor,
-          leadership, and real life.
+          Dad Drive LLC is a growing network of original shows,
+          conversations, and projects built around family, culture,
+          humor, leadership, and real life.
         </p>
-
       </div>
 
       <div class="network-grid">
 
-  <div class="network-card">
-    <h3>Dad Drive</h3>
-    <p>
-      The flagship show. Real conversations about fatherhood,
-      marriage, leadership, work, purpose, and life.
-    </p>
-  </div>
+        <div class="network-card">
+          <img class="network-art"
+               src="assets/dad-drive-podcast.png"
+               alt="Dad Drive">
 
-  <div class="network-card">
-    <h3>Daddy Daughter Dropoff</h3>
-    <p>
-      Real father-daughter conversations, laughs, observations,
-      and everyday life from the morning drive.
-    </p>
-  </div>
+          <div class="network-card-content">
+            <div class="network-kicker">Flagship Podcast</div>
+            <h3>Dad Drive</h3>
+            <p>
+              Real conversations about fatherhood, marriage,
+              leadership, work, purpose, and life.
+            </p>
+          </div>
+        </div>
 
-  <div class="network-card">
-    <h3>Dad Battles</h3>
-    <p>
-      Family challenges, competition, questionable confidence,
-      and the eternal pursuit of Dad bragging rights.
-    </p>
-  </div>
 
-  <div class="network-card">
-    <h3>Home Driven</h3>
-    <p>
-      Honest conversations about marriage, family, home,
-      relationships, and navigating life together.
-    </p>
-  </div>
+        <div class="network-card">
+          <img class="network-art"
+               src="assets/daddy-daughter-dropoff.png"
+               alt="Daddy Daughter Dropoff">
 
-  <div class="network-card">
-    <h3>More Coming</h3>
-    <p>
-      Dad Drive LLC is just getting started. New shows,
-      conversations, projects, and ideas are already in the works.
-    </p>
-  </div>
+          <div class="network-card-content">
+            <div class="network-kicker">Father + Daughter</div>
+            <h3>Daddy Daughter Dropoff</h3>
+            <p>
+              Real father-daughter conversations, laughs,
+              observations, and everyday life from the morning drive.
+            </p>
+          </div>
+        </div>
 
-</div>
 
+        <div class="network-card">
+          <img class="network-art"
+               src="assets/dad-battles.png"
+               alt="Dad Battles">
+
+          <div class="network-card-content">
+            <div class="network-kicker">Family Competition</div>
+            <h3>Dad Battles</h3>
+            <p>
+              Family challenges, competition, questionable confidence,
+              and the eternal pursuit of Dad bragging rights.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="network-card">
+          <img class="network-art"
+               src="assets/home-driven.png"
+               alt="Home Driven">
+
+          <div class="network-card-content">
+            <div class="network-kicker">Marriage + Family</div>
+            <h3>Home Driven</h3>
+            <p>
+              Honest conversations about marriage, family, home,
+              relationships, and navigating life together.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="network-card more-card">
+
+          <div class="network-card-content">
+
+            <div class="plus">+</div>
+
+            <div class="network-kicker">
+              The Next Exit
+            </div>
+
+            <h3>More Coming</h3>
+
+            <p>
+              Dad Drive LLC is just getting started. New shows,
+              conversations, projects, and ideas are already in the works.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
     </div>
-
   </section>
 
 
-  <!-- NEWSLETTER -->
-
   <section class="cta">
-
     <div class="container">
 
       <div class="cta-inner">
@@ -860,36 +792,27 @@
           The Dad Drive Newsletter
         </div>
 
-        <h2>
-          Join the Drive
-        </h2>
+        <h2>Join the Drive</h2>
 
         <p>
-          The podcast is where we talk. The newsletter is where we go
-          a little deeper. Get Dad Drive conversations, practical ideas,
-          stories, resources, and things worth thinking about delivered
-          directly to your inbox.
+          The podcast is where we talk. The newsletter is where we go a little
+          deeper. Get Dad Drive conversations, practical ideas, stories,
+          resources, and things worth thinking about delivered directly
+          to your inbox.
         </p>
 
-        <a
-          class="button button-primary"
-          href="https://daddrivellc.beehiiv.com/"
-          target="_blank"
-          rel="noopener">
+        <a class="button button-primary"
+           href="https://daddrivellc.beehiiv.com/"
+           target="_blank">
           Join the Drive
         </a>
 
       </div>
-
     </div>
-
   </section>
 
 
-  <!-- COMMUNITY -->
-
   <section id="community" class="section-dark cta">
-
     <div class="container">
 
       <div class="cta-inner">
@@ -898,9 +821,7 @@
           The Dad Drive Community
         </div>
 
-        <h2>
-          You Don't Have to Figure It Out Alone.
-        </h2>
+        <h2>You Don't Have to Figure It Out Alone.</h2>
 
         <p>
           Dad Drive isn't supposed to be a one-way conversation.
@@ -909,68 +830,44 @@
           are figuring out every day.
         </p>
 
-        <a
-          class="button button-primary"
-          href="https://discord.gg/kWcHUsCFBG"
-          target="_blank"
-          rel="noopener">
+        <a class="button button-primary"
+           href="https://discord.gg/kWcHUsCFBG"
+           target="_blank">
           Join the Community
         </a>
 
       </div>
-
     </div>
-
   </section>
 
 
-  <!-- SOCIAL -->
-
   <section>
-
     <div class="container">
 
       <div class="section-heading">
-
         <div class="gold-line"></div>
-
-        <div class="eyebrow">
-          Follow Along
-        </div>
-
-        <h2>
-          Follow Dad Drive
-        </h2>
-
+        <div class="eyebrow">Follow Along</div>
+        <h2>Follow Dad Drive</h2>
       </div>
 
       <div class="social-links">
 
-        <a href="https://www.facebook.com/DadDrive" target="_blank" rel="noopener">Facebook</a>
-
-        <a href="https://www.instagram.com/DadDriveLLC/" target="_blank" rel="noopener">Instagram</a>
-
-        <a href="https://www.tiktok.com/@daddrive" target="_blank" rel="noopener">TikTok</a>
-
-        <a href="https://www.youtube.com/@TheDadDrive" target="_blank" rel="noopener">YouTube</a>
-
-        <a href="https://x.com/DadDriveLLC" target="_blank" rel="noopener">X</a>
-
-        <a href="https://www.linkedin.com/in/daddrivellc/" target="_blank" rel="noopener">LinkedIn</a>
-
-        <a href="https://bsky.app/profile/daddrive.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+        <a href="https://www.facebook.com/DadDrive" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/DadDriveLLC/" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@daddrive" target="_blank">TikTok</a>
+        <a href="https://www.youtube.com/@TheDadDrive" target="_blank">YouTube</a>
+        <a href="https://x.com/DadDriveLLC" target="_blank">X</a>
+        <a href="https://www.linkedin.com/in/daddrivellc/" target="_blank">LinkedIn</a>
+        <a href="https://bsky.app/profile/daddrive.bsky.social" target="_blank">Bluesky</a>
 
       </div>
-
     </div>
-
   </section>
 
 </main>
 
 
 <footer>
-
   <div class="container">
 
     <div class="footer-brand">
@@ -982,7 +879,8 @@
     </p>
 
     <p>
-      It's not about where you're going. It's about what's driving you.
+      It's not about where you're going.
+      It's about what's driving you.
     </p>
 
     <p>
@@ -996,7 +894,6 @@
     </p>
 
   </div>
-
 </footer>
 
 </body>
