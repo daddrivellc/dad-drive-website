@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Daddy Daughter Dropoff Podcast | Dad Drive LLC</title>
+
+  <meta name="description" content="Daddy Daughter Dropoff is a funny, unscripted father-daughter podcast featuring real conversations, school runs, coffee stops, pop culture, family life, and everyday chaos from the road.">
+
+  <link rel="canonical" href="https://daddrivellc.com/daddy-daughter-dropoff/">
+
+  <link rel="icon" type="image/png" href="../assets/dad-drive-brand.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Social Sharing -->
+  <meta property="og:title" content="Daddy Daughter Dropoff Podcast">
+  <meta property="og:description" content="Real father-daughter conversations, school runs, coffee stops, jokes, pop culture, and everyday family chaos.">
+  <meta property="og:image" content="https://daddrivellc.com/assets/daddy-daughter-dropoff.png">
+  <meta property="og:url" content="https://daddrivellc.com/daddy-daughter-dropoff/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dad Drive LLC">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daddy Daughter Dropoff Podcast">
+  <meta name="twitter:description" content="A dad, a daughter, a school commute, and absolutely no guarantee the conversation stays on topic.">
+  <meta name="twitter:image" content="https://daddrivellc.com/assets/daddy-daughter-dropoff.png">
+
+  <!-- Podcast Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PodcastSeries",
+    "@id": "https://daddrivellc.com/daddy-daughter-dropoff/#podcast",
+    "name": "Daddy Daughter Dropoff",
+    "url": "https://daddrivellc.com/daddy-daughter-dropoff/",
+    "description": "Daddy Daughter Dropoff is a father-daughter podcast featuring real conversations, humor, school commutes, coffee runs, pop culture, family life, and everyday experiences.",
+    "image": "https://daddrivellc.com/assets/daddy-daughter-dropoff.png",
+    "webFeed": "https://anchor.fm/s/11683a0b0/podcast/rss",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://daddrivellc.com/#organization",
+      "name": "Dad Drive LLC",
+      "url": "https://daddrivellc.com/"
+    },
+    "sameAs": [
+      "https://open.spotify.com/show/2CjHo6AZIdhWp50evNHGSh",
+      "https://anchor.fm/s/11683a0b0/podcast/rss"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --black: #090909;
+      --charcoal: #151515;
+      --cream: #F3E9D2;
+      --gold: #E5A21A;
+      --border: #34312B;
+      --muted: #B8B0A0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: "Inter", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(9, 9, 9, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      min-height: 74px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      font-family: "Oswald", sans-serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      font-family: "Oswald", sans-serif;
+      font-size: .9rem;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      padding: 88px 0 80px;
+      border-bottom: 1px solid var(--border);
+      background:
+        radial-gradient(circle at 80% 20%, rgba(229,162,26,.10), transparent 35%),
+        var(--black);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .cover {
+      max-width: 470px;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      box-shadow: 0 30px 80px rgba(0,0,0,.55);
+    }
+
+    .eyebrow {
+      font-family: "Oswald", sans-serif;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      line-height: 1.05;
+    }
+
+    h1 {
+      font-size: clamp(3.3rem, 7vw, 6rem);
+      margin-bottom: 14px;
+    }
+
+    h1 span {
+      color: var(--gold);
+    }
+
+    .hero-tagline {
+      font-family: "Oswald", sans-serif;
+      font-size: clamp(1.25rem, 3vw, 1.9rem);
+      letter-spacing: 1.2px;
+      margin-bottom: 26px;
+    }
+
+    .hero-copy {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--black);
+      padding: 13px 21px;
+      border: 1px solid var(--gold);
+      font-family: "Oswald", sans-serif;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--cream);
+      border-color: var(--border);
+    }
+
+    .button.secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 40px;
+      max-width: 800px;
+    }
+
+    h2 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      margin-bottom: 18px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .about {
+      background: var(--charcoal);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .statement {
+      padding: 30px;
+      border-left: 5px solid var(--gold);
+      background: var(--black);
+    }
+
+    .statement strong {
+      display: block;
+      font-family: "Oswald", sans-serif;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .statement p {
+      color: var(--muted);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      border: 1px solid var(--border);
+      padding: 28px;
+      background: var(--charcoal);
+    }
+
+    .feature h3 {
+      color: var(--gold);
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .listen {
+      background: var(--charcoal);
+      text-align: center;
+    }
+
+    .listen .section-heading {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .listen .buttons {
+      justify-content: center;
+    }
+
+    .network {
+      text-align: center;
+    }
+
+    .network-box {
+      border: 1px solid var(--border);
+      padding: 45px;
+      background: var(--charcoal);
+      max-width: 820px;
+      margin: auto;
+    }
+
+    .network-box p {
+      color: var(--muted);
+      margin: 16px auto 25px;
+      max-width: 660px;
+    }
+
+    .cta {
+      background: var(--gold);
+      color: var(--black);
+      text-align: center;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 26px;
+    }
+
+    .cta .button {
+      background: var(--black);
+      color: var(--cream);
+      border-color: var(--black);
+    }
+
+    footer {
+      padding: 55px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    footer .footer-brand {
+      font-family: "Oswald", sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    footer .footer-tagline {
+      color: var(--gold);
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: var(--muted);
+    }
+
+    footer a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .cover {
+        max-width: 380px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a class="brand" href="/">
+        DAD <span>DRIVE</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="#about">About</a>
+        <a href="#listen">Listen</a>
+        <a href="/podcast/">Dad Drive Podcast</a>
+        <a href="https://discord.gg/kWcHUsCFBG" target="_blank">Community</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <header class="hero">
+
+    <div class="container hero-grid">
+
+      <div>
+        <img
+          class="cover"
+          src="../assets/daddy-daughter-dropoff.png"
+          alt="Daddy Daughter Dropoff podcast artwork">
+      </div>
+
+      <div>
+
+        <div class="eyebrow">
+          A Dad Drive Network Podcast
+        </div>
+
+        <h1>
+          DADDY DAUGHTER <span>DROPOFF</span>
+        </h1>
+
+        <div class="hero-tagline">
+          ONE DAD. ONE DAUGHTER. ONE MORNING DRIVE.
+        </div>
+
+        <p class="hero-copy">
+          Daddy Daughter Dropoff is what happens when a dad and daughter
+          turn the morning school commute into a podcast. Coffee runs,
+          school drop-offs, pop culture, family debates, random questions,
+          teenage opinions, dad jokes, and whatever else comes up before
+          the bell rings.
+        </p>
+
+        <div class="buttons">
+
+          <a class="button"
+             href="https://open.spotify.com/show/2CjHo6AZIdhWp50evNHGSh"
+             target="_blank">
+            Listen on Spotify
+          </a>
+
+          <a class="button secondary"
+             href="https://anchor.fm/s/11683a0b0/podcast/rss"
+             target="_blank">
+            RSS Feed
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <section id="about" class="about">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Real Life From the Front Seat
+        </div>
+
+        <h2>
+          The School Run Became a Show
+        </h2>
+
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-copy">
+
+          <p>
+            Some of the best conversations between parents and kids happen
+            when nobody planned to have a conversation at all. Sometimes
+            they happen over dinner. Sometimes they happen late at night.
+            Around here, a lot of them happen in the car.
+          </p>
+
+          <p>
+            Daddy Daughter Dropoff captures those conversations between a
+            dad and daughter during the everyday drive to school. There's
+            no boardroom, no studio full of producers, and usually no idea
+            where the conversation is going next.
+          </p>
+
+          <p>
+            One morning might involve coffee shops and school traffic.
+            Another might turn into opinions about music, movies, trends,
+            family life, growing up, or why Dad apparently knows nothing
+            about what teenagers think is cool.
+          </p>
+
+          <p>
+            That's the point. It's a real snapshot of a father-daughter
+            relationship while life is actually happening.
+          </p>
+
+        </div>
+
+        <div class="statement">
+
+          <strong>
+            Childhood happens in ordinary moments.
+          </strong>
+
+          <p>
+            Sometimes the five-minute conversation on the way to school
+            becomes the part you remember years later.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          What You'll Hear
+        </div>
+
+        <h2>
+          No Script Required
+        </h2>
+
+        <p>
+          The conversations change every drive, but a few things tend to
+          show up regularly.
+        </p>
+
+      </div>
+
+      <div class="features">
+
+        <div class="feature">
+          <h3>Dad & Daughter</h3>
+          <p>
+            Real conversations, disagreements, jokes, questions, and the
+            occasional reminder that Dad is apparently embarrassing.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>School Runs</h3>
+          <p>
+            Morning traffic, coffee stops, racing the clock, and the classic
+            school drop-off experience.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Pop Culture</h3>
+          <p>
+            Music, shows, social media, trends, and Dad trying to understand
+            whatever teenagers are talking about this week.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Family Life</h3>
+          <p>
+            The funny, frustrating, meaningful, and completely ordinary
+            moments that come with being a family.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Growing Up</h3>
+          <p>
+            Conversations about school, independence, changing perspectives,
+            and watching your kids become their own people.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Whatever Comes Up</h3>
+          <p>
+            Because the best conversations rarely start with,
+            “Today's official topic is...”
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="listen" class="listen">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Ride Along
+        </div>
+
+        <h2>
+          Listen to Daddy Daughter Dropoff
+        </h2>
+
+        <p>
+          Follow the show on Spotify and join us for the next drive.
+        </p>
+
+      </div>
+
+      <div class="buttons">
+
+        <a class="button"
+           href="https://open.spotify.com/show/2CjHo6AZIdhWp50evNHGSh"
+           target="_blank">
+          Listen on Spotify
+        </a>
+
+        <a class="button secondary"
+           href="https://anchor.fm/s/11683a0b0/podcast/rss"
+           target="_blank">
+          Podcast RSS Feed
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="network">
+
+    <div class="container">
+
+      <div class="network-box">
+
+        <div class="eyebrow">
+          Part of the Dad Drive Network
+        </div>
+
+        <h2>
+          More Than One Drive
+        </h2>
+
+        <p>
+          Daddy Daughter Dropoff is an original Dad Drive LLC show.
+          The Dad Drive Network brings together conversations about
+          fatherhood, marriage, family, leadership, humor, culture,
+          and real life.
+        </p>
+
+        <div class="buttons" style="justify-content:center;">
+
+          <a class="button"
+             href="/">
+            Visit Dad Drive
+          </a>
+
+          <a class="button secondary"
+             href="/podcast/">
+            Dad Drive Podcast
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="eyebrow" style="color:#090909;">
+        Stay in the Drive
+      </div>
+
+      <h2>
+        Join the Dad Drive Newsletter
+      </h2>
+
+      <p>
+        New episodes, Dad Drive updates, useful ideas, and things worth
+        talking about—without filling your inbox with nonsense.
+      </p>
+
+      <a class="button"
+         href="https://daddrivellc.beehiiv.com/"
+         target="_blank">
+        Join the Drive
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-brand">
+        DAD DRIVE LLC
+      </div>
+
+      <div class="footer-tagline">
+        Drive Safe. Stay Present. Lead Well.
+      </div>
+
+      <p>
+        Daddy Daughter Dropoff is an original Dad Drive LLC podcast.
+      </p>
+
+      <p style="margin-top:18px;">
+        <a href="/">Home</a>
+        &nbsp; • &nbsp;
+        <a href="/podcast/">Dad Drive Podcast</a>
+        &nbsp; • &nbsp;
+        <a href="mailto:hello@daddrivellc.com">
+          hello@daddrivellc.com
+        </a>
+      </p>
+
+      <p style="margin-top:18px; font-size:.85rem;">
+        © 2026 Dad Drive LLC. All Rights Reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
